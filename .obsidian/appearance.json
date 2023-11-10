@@ -1,0 +1,14 @@
+{
+  "cssTheme": "Blue Topaz",
+  "baseFontSize": 18,
+  "theme": "obsidian",
+  "textFontFamily": "Consolas",
+  "accentColor": "",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "custom-admonitions.9277b6"
+  ],
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "AurulentSansM Nerd Font Propo",
+  "showViewHeader": true
+}

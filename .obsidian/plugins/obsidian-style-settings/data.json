@@ -1,0 +1,19 @@
+{
+  "blue-topaz-theme@@h1-toggle-underline": true,
+  "blue-topaz-theme@@h2-toggle-short-underline": false,
+  "blue-topaz-theme@@h3-toggle-short-underline": true,
+  "blue-topaz-theme@@highlight-style": "all-rounded-corners-highlight",
+  "blue-topaz-theme@@colorful-ordered-list": true,
+  "blue-topaz-theme@@colorful-unordered-list": true,
+  "blue-topaz-theme@@rainbow-ordered-list": true,
+  "blue-topaz-theme@@toggle-bg-panel-page": false,
+  "blue-topaz-theme@@header-1-background": false,
+  "blue-topaz-theme@@header-2-background": false,
+  "blue-topaz-theme@@h2-toggle-underline": false,
+  "blue-topaz-theme@@colorful-link-animation": true,
+  "blue-topaz-theme@@rainbow-checklist": true,
+  "blue-topaz-theme@@tag-style-option": "rainbow-tag",
+  "blue-topaz-theme@@dvtable-style-options": "no-wrapped-dvtable",
+  "blue-topaz-theme@@auto-serial-number-dvtable": true,
+  "blue-topaz-theme@@full-width-dvtable": false
+}
