@@ -54,7 +54,6 @@
     }
   ],
   "editor:toggle-source": [],
-  "graph:open": [],
   "editor:toggle-bullet-list": [
     {
       "modifiers": [
@@ -71,23 +70,38 @@
       "key": "]"
     }
   ],
-  "editor:toggle-code": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "`"
-    }
-  ],
+  "obsidian-excalidraw-plugin:insert-link": [],
+  "obsidian-excalidraw-plugin:save": [],
   "editor:insert-codeblock": [
     {
       "modifiers": [
-        "Alt",
         "Mod"
       ],
       "key": "`"
     }
   ],
-  "obsidian-excalidraw-plugin:insert-link": [],
-  "obsidian-excalidraw-plugin:save": []
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "`"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "2"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ]
 }

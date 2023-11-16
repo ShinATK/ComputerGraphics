@@ -4,39 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "7ee6162978dbfe2e",
+        "id": "dd5a7d1759714623",
         "type": "tabs",
         "children": [
           {
-            "id": "59a8c83316204ff0",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "5b00f21f4964d3db",
+            "id": "be9c5abf1eda8347",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "002-英语基础/README-英语基础.md",
+                "file": "001-Programming/C++/Learn_C++/C++入门教程/05.C++多态与虚函数.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -48,7 +32,6 @@
       {
         "id": "33f5942180a4e2e1",
         "type": "tabs",
-        "dimension": 67.56487025948104,
         "children": [
           {
             "id": "1ead3e342effc9be",
@@ -96,11 +79,37 @@
           }
         ],
         "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 352.5026054382324,
+    "collapsed": true
+  },
+  "right": {
+    "id": "cad267b78a0d75ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0a0ad79ead788e2",
+        "type": "tabs",
+        "dimension": 67.94055201698514,
+        "children": [
+          {
+            "id": "dbbe7e5d16a5cf14",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "001-Programming/C++/Learn_C++/C++入门教程/05.C++多态与虚函数.md"
+              }
+            }
+          }
+        ]
       },
       {
-        "id": "e3b267c9fb6d8e91",
+        "id": "4d803d783eed0a7a",
         "type": "tabs",
-        "dimension": 32.43512974051897,
+        "dimension": 32.05944798301486,
         "children": [
           {
             "id": "3fd20d70d7d0c310",
@@ -111,22 +120,12 @@
             }
           },
           {
-            "id": "9a1c587d6cf447eb",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "002-英语基础/README-英语基础.md"
-              }
-            }
-          },
-          {
             "id": "e9f06eeb250851cc",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "002-英语基础/README-英语基础.md",
+                "file": "001-Programming/C++/Learn_C++/C++入门教程/05.C++多态与虚函数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "002-英语基础/README-英语基础.md",
+                "file": "001-Programming/C++/Learn_C++/C++入门教程/05.C++多态与虚函数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,68 +162,66 @@
       }
     ],
     "direction": "horizontal",
-    "width": 357.5
-  },
-  "right": {
-    "id": "cad267b78a0d75ed",
-    "type": "split",
-    "children": [],
-    "direction": "horizontal",
-    "width": 362.5,
+    "width": 281.5,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:打开快速切换": false,
-      "graph:查看关系图谱": true,
-      "canvas:新建白板": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": true,
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "workspaces:管理工作区布局": false,
       "table-editor-obsidian:Advanced Tables Toolbar": true,
       "mermaid-tools:Open Mermaid Toolbar": true,
-      "periodic-notes:Open today": true,
-      "obsidian-excalidraw-plugin:新建绘图文件": true
+      "periodic-notes:Open today": false
     }
   },
-  "active": "5b00f21f4964d3db",
+  "active": "be9c5abf1eda8347",
   "lastOpenFiles": [
-    "001-编程基础/README-编程基础.md",
+    "001-Programming/C/C.md",
+    "001-Programming/README-编程基础.md",
     "README.md",
-    "002-英语基础/README-英语基础.md",
-    "001-编程基础/C++/书籍阅读/书籍阅读-modern-cpp-tutorial-zh-cn.md",
-    "001-编程基础/C++/书籍阅读",
-    "001-编程基础/C++/编程基础-C++.md",
-    "007-深入提升/README-深入提升.md",
-    "005-项目实践/README-项目实践.md",
-    "003-图形学基础/README-图形学基础.md",
-    "001-编程基础/Vim/编程基础-Vim.md",
-    "001-编程基础/QT/编程基础-QT.md",
-    "001-编程基础/Linux/编程基础-Linux.md",
-    "001-编程基础/Emacs/编程基础-Emacs.md",
-    "001-编程基础/CMake/编程基础-CMake.md",
-    "005-项目实践/实践：光线追踪/实践：光线追踪.md",
-    "005-项目实践/实践：软光栅/实践：软光栅.md",
-    "005-项目实践/实践：渲染进阶/实践：渲染进阶.md",
-    "004-图形学API/README-图形学API.md",
-    "001-编程基础/Vim",
-    "002-英语基础",
-    "001-编程基础/Emacs",
-    "006-游戏开发相关/README-游戏开发相关.md",
-    "001-编程基础/QT",
-    "007-深入提升",
-    "004-图形学API/3D引擎",
-    "004-图形学API/渲染框架",
-    "001-编程基础/Linux",
-    "001-编程基础/CMake",
-    "Doing/5-Think/LeetCode/【LeetCode】三数大小排序.md",
-    "Doing/5-Think/LeetCode/【LeetCode】判断素数.md",
-    "Doing/5-Think/LeetCode/【LeetCode】阶乘（C语言阶乘数值溢出问题）.md",
-    "Planner/01_CS/Linux.md",
-    "Doing/5-Think/【Think】APHDNOTENOUGH.md",
-    "Doing/5-Think/【Think】Pytorch问题记录.md",
-    "Doing/5-Think/【Think】命令式编程_为什么你学了编程却写不出程序.md",
-    "Doing/0-Learn/【Learn】QT.md",
+    "001-Programming/C++/Learn_C++/C++入门教程/05.C++多态与虚函数.md",
+    "001-Programming/C++/C++.md",
+    "001-Programming/C++/Learn_C++/C++入门教程/06.运算符重载.md",
+    "001-Programming/Computer/Computer.md",
+    "003-ComputerGraphics/README-图形学.md",
+    "001-Programming/C++/Learn_C++/深入学习C++的路线规划.md",
+    "003-ComputerGraphics/007-深入提升/README-深入提升.md",
+    "003-ComputerGraphics/006-游戏开发相关/README-游戏开发相关.md",
+    "003-ComputerGraphics/005-CGProjects/README-项目实践.md",
+    "003-ComputerGraphics/004-CGAPI/README-图形学API.md",
+    "003-ComputerGraphics/计算机图形学基础",
+    "001-Programming/Computer/操作系统/pdf/book-riscv-rev2.pdf",
+    "001-Programming/Computer/操作系统/pdf",
+    "001-Programming/Computer/操作系统/新建文件夹",
+    "001-Programming/Computer/计算机图形学",
+    "001-Programming/Computer/新建文件夹",
+    "001-Programming/Computer/编译原理",
+    "001-Programming/Computer/数据库系统导论",
+    "001-Programming/Computer/分布式系统",
+    "001-Programming/Computer/操作系统",
+    "001-Programming/C++/Learn_C++/C++入门教程/04.继承与派生.md",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "001-Programming/C++/Learn_C++/C++入门教程/src/02-Cpp-Class+Object/errorRecord.md",
+    "003-ComputerGraphics/计算机图形学的一些思考.md",
+    "003-ComputerGraphics/GAMES101/未命名.md",
+    "001-Programming/C++/Learn_C++/C++基础教程/未命名.md",
+    "001-Programming/C++/Learn_C++/C++入门教程/02.C++类和对象（class和object）.md",
+    "001-Programming/C++/Learn_C++/C++入门教程/03.C++引用.md",
+    "001-Programming/C++/Learn_C++/C++Primer5th/notes/ch02.md",
+    "001-Programming/C++/Learn_C++/C++Primer5th/excersize/ch02.md",
+    "001-Programming/C++/Learn_C++/C++学习路线规划/C++Primer5th/notes/bookread-C++Primer5th_PDF.md",
+    "001-Programming/C++/Learn_C++/C++学习路线规划/C++Primer5th/第2章 变量和基本类型/2.1 基本内置类型.md",
+    "001-Programming/C++/Learn_C++/notes/C++学习路线规划/C++Primer5th/notes/第2章 变量和基本类型/2.1 基本内置类型.md",
+    "001-Programming/C/attachments/Pasted image 20231114150629.png",
+    "001-Programming/C/attachments/Pasted image 20231114150554.png",
+    "001-Programming/C++/Learn_Qt/draft/Qt思路整理.canvas",
+    "WhiteBoard/未命名.canvas",
+    "001-Programming/BookReading/C++Primer5th/img/Pasted image 20231104215331.png",
     "Planner/02_Language/img/Pasted image 20231109005439.png",
     "Doing/img/Pasted image 20230411093837.png",
     "Doing/img/Pasted image 20231101214556.png",
@@ -234,9 +231,6 @@
     "01_CS/02_CS基础工具/Vim模式切换.canvas",
     "01_CS/04_计算机视觉/统计学习方法/第一篇 监督学习/第2章 感知机/img/Pasted image 20230808113126.png",
     "01_CS/04_计算机视觉/统计学习方法/第一篇 监督学习/第4章 朴素贝叶斯算法/img/Pasted image 20231105131936.png",
-    "01_CS/04_计算机视觉/统计学习方法/第一篇 监督学习/第1章 统计学习及监督学习概论/img/Pasted image 20230806213359.png",
-    "01_CS/04_计算机视觉/MachineLearning_AdrewNG2020/COURSE 2 Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization/img/Week03/Random_hyperparameters.png",
-    "01_CS/04_计算机视觉/MachineLearning_AdrewNG2020/COURSE 2 Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization/img/Week03/Pasted image 20230702155946.png",
     "Reading/References/Notes/202308/canvas/canvas_Mechanisms of growth and defect properties of epitaxial SiC.canvas"
   ]
 }

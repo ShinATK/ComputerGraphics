@@ -3,7 +3,7 @@
   "livePreview": true,
   "readableLineLength": false,
   "showLineNumber": true,
-  "attachmentFolderPath": "./img",
+  "attachmentFolderPath": "./attachments",
   "newFileLocation": "current",
   "alwaysUpdateLinks": true,
   "newFileFolderPath": "每日记录",
