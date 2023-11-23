@@ -140,16 +140,16 @@ void rst::rasterizer::draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf
 }
 
 //Screen space rasterization
-//void rst::rasterizer::rasterize_triangle(const Triangle& t)
-//{//执行三角形栅格化算法
+// void rst::rasterizer::rasterize_triangle(const Triangle& t)
+// {//执行三角形栅格化算法
 //    auto v = t.toVector4();
-//
+
 //    // 用矩形将三角形包围起来,找到矩形的四个顶点，构建三角形包围盒
 //    float min_x = std::min(v[0].x(), std::min(v[1].x(), v[2].x()));
 //    float max_x = std::max(v[0].x(), std::max(v[1].x(), v[2].x()));
 //    float min_y = std::min(v[0].y(), std::min(v[1].y(), v[2].y()));
 //    float max_y = std::max(v[0].y(), std::max(v[1].y(), v[2].y()));
-//
+
 //    // 前两层 for 循环
 //    // 遍历三角形包围盒中的所有测试点
 //    for (int x = min_x; x <= max_x; x++)
@@ -181,104 +181,104 @@ void rst::rasterizer::draw(pos_buf_id pos_buffer, ind_buf_id ind_buffer, col_buf
 //            }
 //        }
 //    }
-//}
+// }
 
 //MSAA
-//void rst::rasterizer::rasterize_triangle(const Triangle& t)
-//{//执行三角形栅格化算法
-//    auto v = t.toVector4();
-//
-//    // 相邻两个像素之间差值为1
-//    // 这里将每个像素分成4份，即进行 2*2 采样
-//    // x，y分别取值
-//    // +0.25, +0.25; +0.75, +0.25; +0.75, +0.75; +0.25, +0.75; 
-//    std::vector<float> _msaa{ 0.25,0.25,0.75,0.75,0.25 };
-//
-//    float min_x = std::min(v[0].x(), std::min(v[1].x(), v[2].x()));
-//    float max_x = std::max(v[0].x(), std::max(v[1].x(), v[2].x()));
-//    float min_y = std::min(v[0].y(), std::min(v[1].y(), v[2].y()));
-//    float max_y = std::max(v[0].y(), std::max(v[1].y(), v[2].y()));
-//
-//    for (int x = min_x; x <= max_x; x++)
-//    {
-//        for (int y = min_y; y <= max_y; y++)
-//        {
-//            float min_depth = FLT_MAX;
-//            float count = 0.0;
-//
-//            for (int k = 0; k < 4; k++)
-//            {// 遍历采样的四个点
-//                if (insideTriangle(x + _msaa[k + 1], y + _msaa[k], t.v))
-//                {// 寻找四个采样点中处于三角形内部的点
-//                    auto tup = computeBarycentric2D(x + _msaa[k + 1], y + _msaa[k], t.v);
-//                    float alpha, beta, gamma;
-//                    std::tie(alpha, beta, gamma) = tup;
-//                    float w_reciprocal = 1.0 / (alpha / v[0].w() + beta / v[1].w() + gamma / v[2].w());
-//                    float z_interpolated = alpha * v[0].z() / v[0].w() + beta * v[1].z() / v[1].w() + gamma * v[2].z() / v[2].w();
-//                    z_interpolated *= w_reciprocal;
-//                    count += 0.25; // 每个采样点占比 1/4
-//                    min_depth = std::min(z_interpolated, min_depth);
-//                }
-//            }
-//
-//            if (count > 0 && depth_buf[get_index(x, y)] > min_depth)
-//            {// count不为0，就说明该像素至少有 1/4 部分在三角形内
-//                Vector3f color = t.getColor() * count;// 给颜色加上采样点权重
-//                Vector3f point;
-//                point << x, y, min_depth;
-//                depth_buf[get_index(x, y)] = min_depth;
-//                set_pixel(point, color);
-//            }
-//        }
-//    }
-//}
+void rst::rasterizer::rasterize_triangle(const Triangle& t)
+{//执行三角形栅格化算法
+   auto v = t.toVector4();
+
+   // 相邻两个像素之间差值为1
+   // 这里将每个像素分成4份，即进行 2*2 采样
+   // x，y分别取值
+   // +0.25, +0.25; +0.75, +0.25; +0.75, +0.75; +0.25, +0.75; 
+   std::vector<float> _msaa{ 0.25,0.25,0.75,0.75,0.25 };
+
+   float min_x = std::min(v[0].x(), std::min(v[1].x(), v[2].x()));
+   float max_x = std::max(v[0].x(), std::max(v[1].x(), v[2].x()));
+   float min_y = std::min(v[0].y(), std::min(v[1].y(), v[2].y()));
+   float max_y = std::max(v[0].y(), std::max(v[1].y(), v[2].y()));
+
+   for (int x = min_x; x <= max_x; x++)
+   {
+       for (int y = min_y; y <= max_y; y++)
+       {
+           float min_depth = FLT_MAX;
+           float count = 0.0;
+
+           for (int k = 0; k < 4; k++)
+           {// 遍历采样的四个点
+               if (insideTriangle(x + _msaa[k + 1], y + _msaa[k], t.v))
+               {// 寻找四个采样点中处于三角形内部的点
+                   auto tup = computeBarycentric2D(x + _msaa[k + 1], y + _msaa[k], t.v);
+                   float alpha, beta, gamma;
+                   std::tie(alpha, beta, gamma) = tup;
+                   float w_reciprocal = 1.0 / (alpha / v[0].w() + beta / v[1].w() + gamma / v[2].w());
+                   float z_interpolated = alpha * v[0].z() / v[0].w() + beta * v[1].z() / v[1].w() + gamma * v[2].z() / v[2].w();
+                   z_interpolated *= w_reciprocal;
+                   count += 0.25; // 每个采样点占比 1/4
+                   min_depth = std::min(z_interpolated, min_depth);
+               }
+           }
+
+           if (count > 0 && depth_buf[get_index(x, y)] > min_depth)
+           {// count不为0，就说明该像素至少有 1/4 部分在三角形内
+               Vector3f color = t.getColor() * count;// 给颜色加上采样点权重
+               Vector3f point;
+               point << x, y, min_depth;
+               depth_buf[get_index(x, y)] = min_depth;
+               set_pixel(point, color);
+           }
+       }
+   }
+}
 
 // MSAA: no black edge
-void rst::rasterizer::rasterize_triangle(const Triangle& t) {//执行三角形栅格化算法
-    auto v = t.toVector4();
-    std::vector<float> msaa{ 0.25,0.25,0.75,0.75,0.25 };
+// void rst::rasterizer::rasterize_triangle(const Triangle& t) {//执行三角形栅格化算法
+//     auto v = t.toVector4();
+//     std::vector<float> msaa{ 0.25,0.25,0.75,0.75,0.25 };
 
-    // 用矩形将三角形包围起来,找到矩形的四个顶点，构建三角形包围盒
-    float min_x = std::min(v[0].x(), std::min(v[1].x(), v[2].x()));
-    float max_x = std::max(v[0].x(), std::max(v[1].x(), v[2].x()));
-    float min_y = std::min(v[0].y(), std::min(v[1].y(), v[2].y()));
-    float max_y = std::max(v[0].y(), std::max(v[1].y(), v[2].y()));
+//     // 用矩形将三角形包围起来,找到矩形的四个顶点，构建三角形包围盒
+//     float min_x = std::min(v[0].x(), std::min(v[1].x(), v[2].x()));
+//     float max_x = std::max(v[0].x(), std::max(v[1].x(), v[2].x()));
+//     float min_y = std::min(v[0].y(), std::min(v[1].y(), v[2].y()));
+//     float max_y = std::max(v[0].y(), std::max(v[1].y(), v[2].y()));
 
-    // 遍历三角形包围盒中的所有测试点
-    for (int x = min_x; x <= max_x; x++)
-    {
-        for (int y = min_y; y <= max_y; y++)
-        {
-            float min_depth = FLT_MAX; //最小深度，默认是无穷远
-            int eid = get_index(x, y) * 4;
-            for (int k = 0; k < 4; k++)
-            {
-                if (insideTriangle(x + msaa[k + 1], y + msaa[k], t.v))
-                {
-                    //如果在三角形内部，计算当前深度,得到当前最小深度
-                    auto tup = computeBarycentric2D(x, y, t.v);
-                    float alpha, beta, gamma;
-                    std::tie(alpha, beta, gamma) = tup;
-                    float w_reciprocal = 1.0 / (alpha / v[0].w() + beta / v[1].w() + gamma / v[2].w());
-                    float z_interpolated = alpha * v[0].z() / v[0].w() + beta * v[1].z() / v[1].w() + gamma * v[2].z() / v[2].w();
-                    z_interpolated *= w_reciprocal;
+//     // 遍历三角形包围盒中的所有测试点
+//     for (int x = min_x; x <= max_x; x++)
+//     {
+//         for (int y = min_y; y <= max_y; y++)
+//         {
+//             float min_depth = FLT_MAX; //最小深度，默认是无穷远
+//             int eid = get_index(x, y) * 4;
+//             for (int k = 0; k < 4; k++)
+//             {
+//                 if (insideTriangle(x + msaa[k + 1], y + msaa[k], t.v))
+//                 {
+//                     //如果在三角形内部，计算当前深度,得到当前最小深度
+//                     auto tup = computeBarycentric2D(x, y, t.v);
+//                     float alpha, beta, gamma;
+//                     std::tie(alpha, beta, gamma) = tup;
+//                     float w_reciprocal = 1.0 / (alpha / v[0].w() + beta / v[1].w() + gamma / v[2].w());
+//                     float z_interpolated = alpha * v[0].z() / v[0].w() + beta * v[1].z() / v[1].w() + gamma * v[2].z() / v[2].w();
+//                     z_interpolated *= w_reciprocal;
 
-                    if (z_interpolated < depth_sample[eid + k]) {
-                        depth_sample[eid + k] = z_interpolated;
-                        frame_sample[eid + k] = t.getColor() / 4;
-                    }
+//                     if (z_interpolated < depth_sample[eid + k]) {
+//                         depth_sample[eid + k] = z_interpolated;
+//                         frame_sample[eid + k] = t.getColor() / 4;
+//                     }
 
-                    min_depth = std::min(depth_sample[eid+k], z_interpolated);
-                }
-            }
-            Vector3f color = frame_sample[eid + 0] + frame_sample[eid + 1] + frame_sample[eid + 2] + frame_sample[eid + 3];
-            Vector3f point;
-            point << x, y, min_depth;
-            set_pixel(point, color);
-            depth_buf[get_index(x, y)] = std::min(min_depth, depth_buf[get_index(x,y)]);
-        }
-    }
-}
+//                     min_depth = std::min(depth_sample[eid+k], z_interpolated);
+//                 }
+//             }
+//             Vector3f color = frame_sample[eid + 0] + frame_sample[eid + 1] + frame_sample[eid + 2] + frame_sample[eid + 3];
+//             Vector3f point;
+//             point << x, y, min_depth;
+//             set_pixel(point, color);
+//             depth_buf[get_index(x, y)] = std::min(min_depth, depth_buf[get_index(x,y)]);
+//         }
+//     }
+// }
 
 void rst::rasterizer::set_model(const Eigen::Matrix4f& m)
 {
