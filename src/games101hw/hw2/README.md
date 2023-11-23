@@ -24,7 +24,7 @@
 
 ### 判断测试点是否在三角形内
 
-利用测试点与三角形三个顶点之间构成的向量计算叉积。最后得到的三个叉积结果应该都为正或负（正负取决于三角形顶点的方向）
+利用测试点与三角形三个顶点之间构成的向量计算叉积。最后得到的三个叉积结果应该为同方向
 
 ### 三角形栅格化算法
 
@@ -149,10 +149,62 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t)
 
 ### MSAA 算法
 
+多重采样抗锯齿 Multisampling Anti-Aliasing，MSAA，最常见的反锯齿算法，首先来自于OpenGL
+
+只对z缓冲（z-buffer）和模板缓存（stencil buffer）中的数据进行超级采样抗锯齿的处理。可以简单理解为只对多边形的边缘进行抗锯齿处理。从而相比SSAA对画面中的所有数据进行处理，MSAA对资源的消耗需求大幅度减少，不过在画纸上可能稍有不如SSAA。
+
 ### 算法实现
 
 ```cpp
+void rst::rasterizer::rasterize_triangle(const Triangle& t)
 
+{//执行三角形栅格化算法
+
+   auto v = t.toVector4();
+
+   // 相邻两个像素之间差值为1
+   // 这里将每个像素分成4份，即进行 2*2 采样
+   // x，y分别取值
+   // +0.25, +0.25; +0.75, +0.25; +0.75, +0.75; +0.25, +0.75;
+   std::vector<float> _msaa{ 0.25,0.25,0.75,0.75,0.25 };
+
+   float min_x = std::min(v[0].x(), std::min(v[1].x(), v[2].x()));
+   float max_x = std::max(v[0].x(), std::max(v[1].x(), v[2].x()));
+   float min_y = std::min(v[0].y(), std::min(v[1].y(), v[2].y()));
+   float max_y = std::max(v[0].y(), std::max(v[1].y(), v[2].y()));
+
+   for (int x = min_x; x <= max_x; x++)
+   {
+       for (int y = min_y; y <= max_y; y++)
+       {
+           float min_depth = FLT_MAX;
+           float count = 0.0;
+           for (int k = 0; k < 4; k++)
+           {// 遍历采样的四个点
+               if (insideTriangle(x + _msaa[k + 1], y + _msaa[k], t.v))
+               {// 寻找四个采样点中处于三角形内部的点
+                   auto tup = computeBarycentric2D(x + _msaa[k + 1], y + _msaa[k], t.v);
+                   float alpha, beta, gamma;
+                   std::tie(alpha, beta, gamma) = tup;
+                   float w_reciprocal = 1.0 / (alpha / v[0].w() + beta / v[1].w() + gamma / v[2].w());
+                   float z_interpolated = alpha * v[0].z() / v[0].w() + beta * v[1].z() / v[1].w() + gamma * v[2].z() / v[2].w();
+                   z_interpolated *= w_reciprocal;
+                   count += 0.25; // 每个采样点占比 1/4
+                   min_depth = std::min(z_interpolated, min_depth);
+               }
+           }
+           
+           if (count > 0 && depth_buf[get_index(x, y)] > min_depth)
+           {// count不为0，就说明该像素至少有 1/4 部分在三角形内
+               Vector3f color = t.getColor() * count;// 给颜色加上采样点权重
+               Vector3f point;
+               point << x, y, min_depth;
+               depth_buf[get_index(x, y)] = min_depth;
+               set_pixel(point, color);
+           }
+       }
+   }
+}
 ```
 ### 运行结果
 
