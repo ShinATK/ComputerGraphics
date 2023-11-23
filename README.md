@@ -1,6 +1,6 @@
 ### 图形学基础
 
-- [GAMES101: 现代计算机图形学入门 -UCSB 闫令琪](https://link.zhihu.com/?target=https%3A//sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
+- [ ] [GAMES101: 现代计算机图形学入门 -UCSB 闫令琪](https://link.zhihu.com/?target=https%3A//sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
 
 > 感谢「孙小磊」的[笔记](https://www.zhihu.com/column/c_1249465121615204352)
 
