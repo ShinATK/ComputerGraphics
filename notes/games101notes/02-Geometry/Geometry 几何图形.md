@@ -25,18 +25,18 @@
 
 【CSG】**constructive solid geometry (implicit)**
 
-![几何形体的布尔运算](../img/Pasted%20image%2020231124121203.png)
+![几何形体的布尔运算](../img/几何形体的布尔运算.png)
 
 ## 距离函数（隐式）
 
 **distance functions(implicit)**
 
-![利用距离函数产生的融合几何形体](../img/Pasted%20image%2020231124121511.png)
+![利用距离函数产生的融合几何形体](../img/利用距离函数产生的融合几何形体.png)
 
 - 描述一个点到物体的最近距离（signed）
 - giving minimum distance from anywhere to object
 
-*一个应用距离函数的例子*：![](../img/Pasted%20image%2020231124121616.png)
+*一个应用距离函数的例子*：![](../img/一个应用距离函数的例子.png)
 
 A，左侧遮挡1/3；B，左侧遮挡2/3。如果想要将二者混合（blend），单纯的叠加会导致中间的1/3部分颜色较浅。
 
