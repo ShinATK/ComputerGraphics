@@ -98,6 +98,7 @@ if (zp <depth_buf[get_index(x,y)]){
 ### 运行结果
 
 - `./Rasterizer output.png normal`
+
 ![normal_output](./img/normal_output.png)
 
 ### 问题
@@ -114,6 +115,7 @@ if (zp <depth_buf[get_index(x,y)]){
 
 用到公式如下：
 **环境光项+漫反射项+高光项=Blinn-Phong反射模型**
+
 ![Blinn-Phong反射模型](Blinn-Phong反射模型.png)
 
 **需要注意**：除了计算 distance decay 的时候，light 到 point 的长度计算要用到非归一化的向量，其他的如法向量n，point到light的向量，以及半程向量等都需要进行归一化即 `vector.normalized()`
