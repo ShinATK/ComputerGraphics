@@ -98,7 +98,7 @@ if (zp <depth_buf[get_index(x,y)]){
 ### 运行结果
 
 - `./Rasterizer output.png normal`
-![normal_output](normal_output.png)
+![normal_output](./img/normal_output.png)
 
 ### 问题
 
@@ -114,7 +114,7 @@ if (zp <depth_buf[get_index(x,y)]){
 
 用到公式如下：
 **环境光项+漫反射项+高光项=Blinn-Phong反射模型**
-![Blinn-Phong反射模型](Pasted%20image%2020231122165120.png)
+![Blinn-Phong反射模型](Blinn-Phong反射模型.png)
 
 **需要注意**：除了计算 distance decay 的时候，light 到 point 的长度计算要用到非归一化的向量，其他的如法向量n，point到light的向量，以及半程向量等都需要进行归一化即 `vector.normalized()`
 
@@ -158,10 +158,10 @@ Eigen::Vector3f ks = Eigen::Vector3f(0.7937, 0.7937, 0.7937);
 - texture shading是根据UV坐标从纹理中提取
 
 -  `./Rasterizer output.png phong`
-![phong_output](phong_output.png)
+![phong_output](./img/phong_output.png)
 
 - `./Rasterizer output.png texture`
-![texture_output](texture_output.png)
+![texture_output](./img/texture_output.png)
 
 ### 问题
 
@@ -198,7 +198,7 @@ Error: Assertion failed ((unsigned)(i1 * DataType<_Tp>::channels) < (unsigned)(s
 
 `bump_fragment_shader() in main.cpp`
 
-凹凸贴图具体参考笔记：[TextureMapping 纹理映射](TextureMapping%20纹理映射.md)
+凹凸贴图具体参考笔记：[TextureMapping 纹理映射](./img/TextureMapping%20纹理映射.md)
 
 主要思路是根据texture上的差值计算dU和dV，所以需要获得tex_coords坐标，最后通过TBN变换矩阵改变发现朝向从而在人的视觉感官上改变物体表面的凹凸感
 
@@ -240,9 +240,9 @@ normal = (TBN * ln).normalized();
 ### 运行结果
 
 -  `./Rasterizer output.png bump`
-![bump_output](bump_output.png)
+![bump_output](./img/bump_output.png)
 -  `./Rasterizer output.png displacement`
-![displacement_output](displacement_output.png)
+![displacement_output](./img/displacement_output.png)
 
 ## 提高项
 
@@ -258,5 +258,5 @@ normal = (TBN * ln).normalized();
 
 vs 2019中，通过 `调试->属性` 进行修改命令行参数即可
 
-![调试->属性，修改命令参数](Pasted%20image%2020231123225302.png)
+![调试->属性，修改命令参数](img/VS中调试-属性，修改命令参数.png)
 
