@@ -18,7 +18,7 @@
 
 正确的输出结果如图：
 
-<img src=../../../img/hw2_output.png>
+<img src=./img/hw2_output.png>
 
 ## 确定思路
 
@@ -140,7 +140,7 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t)
 
 ### 运行结果
 
-<img src=../../../img/hw2_rasterize_triangle_output.png width=50%>
+<img src=./img/hw2_rasterize_triangle_output.png width=50%>
 
 ## 提高项
 
@@ -208,7 +208,7 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t)
 ```
 ### 运行结果
 
-<img src=../../../img/hw2_msaa_output.png width=50%>
+<img src=./img/hw2_msaa_output.png width=50%>
 
 与之前的运行结果进行对比可以发现，先前蓝色三角形边缘处明显的锯齿感在此时已经几乎感觉不到了。
 
@@ -218,11 +218,11 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t)
 
 修改代码，让蓝色三角形处于绿色三角形上方，进行对比。
 
-<img src=../../../img/hw2_msaa_output_blueUp.png width=50%>
+<img src=./img/hw2_msaa_output_blueUp.png width=50%>
 
 为了对比，这里再给出不使用 MSAA 算法时，蓝色三角形在上方时的情况：
 
-<img src=../../../img/hw2_output_blueUp.png width=50%>
+<img src=./img/hw2_output_blueUp.png width=50%>
 
 可以发现，黑色描边只在使用了 MSAA 采样算法时出现。
 
@@ -327,9 +327,9 @@ void rst::rasterizer::clear(rst::Buffers buff)
 
 ### 运行结果
 
-<img src=../../../img/hw2_msaa_noEdge.png width=50%>
+<img src=./img/hw2_msaa_noEdge.png width=50%>
 
-<img src=../../../img/hw2_msaa_noEdge_blueUp.png width=50%>
+<img src=./img/hw2_msaa_noEdge_blueUp.png width=50%>
 
 
 ## 遗留问题
