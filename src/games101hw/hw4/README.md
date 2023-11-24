@@ -95,7 +95,7 @@ cv::Point2f recursive_bezier(const std::vector<cv::Point2f> &control_points, flo
 当我按照方法一完成函数后的运行结果为：
 <img src=./img/abnormal_bezier_curve_method01.png width=50% />
 
-- 对比两图可以发现，曲线在后边两个控制点处计算得到的曲线结果出现问题
+- 对比两图可以发现，在后边几个控制点处计算得到的曲线结果出现问题
 - 问题代码：`C = factorialC(i, n) * pow((1 - t), n - i) * pow(t, i)`
 - 由于这里的n为控制点个数，实际上公式中的n应该为控制点两两相邻点相连后的边的个数，应该为n-1
 - 修改代码：`C = factorialC(i, n-1) * pow((1 - t), n-1 - i) * pow(t, i)`
