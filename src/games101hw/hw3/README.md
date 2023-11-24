@@ -99,7 +99,7 @@ if (zp <depth_buf[get_index(x,y)]){
 
 - `./Rasterizer output.png normal`
 
-![normal_output](./img/normal_output.png)
+<img src=./img/normal_output.png width=50%>
 
 ### 问题
 
@@ -160,10 +160,12 @@ Eigen::Vector3f ks = Eigen::Vector3f(0.7937, 0.7937, 0.7937);
 - texture shading是根据UV坐标从纹理中提取
 
 -  `./Rasterizer output.png phong`
-![phong_output](./img/phong_output.png)
+
+<img src=./img/phong_output.png width=50%>
 
 - `./Rasterizer output.png texture`
-![texture_output](./img/texture_output.png)
+
+<img src=./img/texture_output.png width=50%>
 
 ### 问题
 
@@ -242,13 +244,16 @@ normal = (TBN * ln).normalized();
 ### 运行结果
 
 -  `./Rasterizer output.png bump`
-![bump_output](./img/bump_output.png)
+-  
+<img src=./img/bump_output.png width=50%>
+
 -  `./Rasterizer output.png displacement`
-![displacement_output](./img/displacement_output.png)
+
+<img src=./img/displacement_output.png width=50%>
 
 ## 提高项
 
-
+暂时还不会
 
 # 额外收获
 
@@ -260,5 +265,5 @@ normal = (TBN * ln).normalized();
 
 vs 2019中，通过 `调试->属性` 进行修改命令行参数即可
 
-![调试->属性，修改命令参数](img/VS中调试-属性，修改命令参数.png)
+<img src=./img/VS中调试-属性，修改命令参数.png width=65%>
 
