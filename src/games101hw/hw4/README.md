@@ -14,7 +14,7 @@
     - 对于每一一个需要计算的t，将调用另一个函数 `recursive_bezier`，该函数将返回在Bezier曲线上t处的点
     - 最后，将返回的点绘制在 OpenCV::Mat 对象上
 - `recursive_bezier`：使用一个控制点序列和一个浮点数t作为输入，实现de Casteljau算法来返回Bezier曲线上对应点的坐标
-  - 参考：[Geometry笔记部分的Bezier曲线](../../../notes/games101notes/02-Geometry/Geometry%20几何图形.md)
+  - 参考：[Geometry笔记部分的Bezier曲线](../../../notes/games101notes/02-Geometry.md)
 
 # 确定思路
 
