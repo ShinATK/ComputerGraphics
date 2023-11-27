@@ -202,4 +202,6 @@ Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
 }
 ```
 
+## 运行结果
 
+![hw6_output_bunny](img/hw6_output_bunny.png)
