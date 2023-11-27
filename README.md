@@ -8,6 +8,7 @@
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [现代C++教程：高速上手](https://changkun.de/modern-cpp/)
 - [高性能并行编程与优化](https://github.com/parallel101/course)
+- **GPU编程**
 
 ## 图形学基础
 
@@ -40,6 +41,7 @@
 
 - 实战：软光栅
 - 实战：光线追踪
+- 实战：路径追踪
 - 渲染进阶
 
 参考：
