@@ -13,49 +13,49 @@
 ## 图形学基础
 
 - [# GAMES101: 现代计算机图形学入门 -UCSB 闫令琪](https://link.zhihu.com/?target=https%3A//sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
-  - 阅读材料：
-    - [《Fundamentals of Computer Graphics, Fourth Edition》](./pdf/Fundamentals%20of%20Computer%20Graphics,%20Fourth%20Edition.pdf)中的参考章节
-    - [《3D数学基础：图形和游戏开发（第2版）》](./pdf/3D数学基础：图形和游戏开发（第2版）.pdf)
 - [# GAMES202: 高质量实时渲染](https://sites.cs.ucsb.edu/~lingqi/teaching/games202.html)
-
-## 图形学进阶
-
-- [《计算机图形学 第4版》](计算机图形学%20第4版.pdf)
+- [《计算机图形学 第4版》](./pdf/计算机图形学%20第4版.pdf)
   - 在学习**全局光照**那一章节的时候，建议对着下面的教程，写一个*基于Path Tracing的光线追踪渲染器*，只有99行代码
     - [# 全局光照实战](https://www.kevinbeason.com/smallpt/)
-  - 建议再对着下面的教程过一遍**软渲染**。于是*摄像机设置*、*矩阵转换*、*剔除*、*光栅化*、*深度/模板测试*、*贴图*之类的概念都清楚了！
-    - [# 3D C/C++ tutorials - Software rendering](https://link.zhihu.com/?target=http%3A//www.3dcpptutorials.sk/index.php%3Fid%3D15)
-    - [# Developing a Software Renderer Part 1](https://link.zhihu.com/?target=https%3A//trenki2.github.io/blog/2017/06/06/developing-a-software-renderer-part1/)
-    - 两个教程分别对应着两个不同的渲染流派
-      - 基于光栅化的渲染
-      - 基于光线追踪的渲染
-    - 基本上所有的渲染相关的算法都是基于上面两个教程的扩展、近似、改进和优化，很多算法思路都是欺骗人眼睛的trick或者hack。
-
-## 图形学API
-
-- 到这里应该对图形API的意义有所了解了，可以跟着OpenGL的教程做一遍
-  - [# Learn OpenGL CN](https://learnopengl-cn.github.io/)
-- [vulkan](https://vulkan-tutorial.com/)
-
-## 图形学实战
-
-- 实战：软光栅
-- 实战：光线追踪
-- 实战：路径追踪
-- 渲染进阶
-
-参考：
-
-- [计算机图形学应该从什么开始学习？ - 网易游戏雷火事业群的回答 - 知乎](https://www.zhihu.com/question/349302834/answer/931378785)
-- [# 图形学渲染方向个人学习路线整理](https://zhuanlan.zhihu.com/p/445343440)
-- [# 如何开始用 C++ 写一个光栅化渲染器？ - UncP的回答 - 知乎](https://www.zhihu.com/question/24786878/answer/127484388)
-- [# 如何开始用 C++ 写一个光栅化渲染器？ - Zero的回答 - 知乎](https://www.zhihu.com/question/24786878/answer/401447840)
-
-## 论文复现
-
-- 尝试复现一些最新论文中的方法
+- 建议再对着下面的教程过一遍**软渲染**。于是*摄像机设置*、*矩阵转换*、*剔除*、*光栅化*、*深度/模板测试*、*贴图*之类的概念都清楚了！
+  - [# 3D C/C++ tutorials - Software rendering](https://link.zhihu.com/?target=http%3A//www.3dcpptutorials.sk/index.php%3Fid%3D15)
+  - [# Developing a Software Renderer Part 1](https://link.zhihu.com/?target=https%3A//trenki2.github.io/blog/2017/06/06/developing-a-software-renderer-part1/)
+  - 两个教程分别对应着两个不同的渲染流派
+    - 基于光栅化的渲染
+    - 基于光线追踪的渲染
+  - 基本上所有的渲染相关的算法都是基于上面两个教程的扩展、近似、改进和优化，很多算法思路都是欺骗人眼睛的trick或者hack。
+- 阅读材料：
+  - [《Fundamentals of Computer Graphics, Fourth Edition》](./pdf/Fundamentals%20of%20Computer%20Graphics,%20Fourth%20Edition.pdf)中的参考章节
+  - [《3D数学基础：图形和游戏开发（第2版）》](./pdf/3D数学基础：图形和游戏开发（第2版）.pdf)
+  - [# A free educational site that progressively introduces you to the world of computer graphics.](https://www.scratchapixel.com/index.html)
 
 ---
 
-- 参考：
-  [# 游戏程序员学习之路](https://miloyip.github.io/game-programmer/game-programmer-zh-cn.svg)
+## 实战：软光栅
+- [# 如何开始用 C++ 写一个光栅化渲染器？ -知乎问题](https://www.zhihu.com/question/24786878/answer/1483055155)
+- [# Tiny renderer or how OpenGL works: software rendering in 500 lines of code](https://github.com/ssloy/tinyrenderer/wiki)
+
+## 实战：光线追踪
+- [# Ray Tracing in One Weekend Series](https://raytracing.github.io/)
+- [# Nori: an educational ray tracer](https://wjakob.github.io/nori/#)
+
+## 渲染进阶
+
+- [# Physically Based Rendering: From Theory To Implementation](https://pbr-book.org/3ed-2018/contents)
+- [# Real-Time Rendering](https://www.realtimerendering.com/)
+- [# SIGGRAPH articles](https://kesen.realtimerendering.com/)
+
+## 图形学API
+
+- [# Learn OpenGL CN](https://learnopengl-cn.github.io/)
+- [# vulkan](https://vulkan-tutorial.com/)
+
+## 
+
+参考：
+- [# 图形学渲染方向个人学习路线整理](https://zhuanlan.zhihu.com/p/445343440)
+- [# 计算机图形学应该从什么开始学习？ - 网易游戏雷火事业群的回答 - 知乎](https://www.zhihu.com/question/349302834/answer/931378785)
+- [# 图形学渲染方向个人学习路线整理](https://zhuanlan.zhihu.com/p/445343440)
+- [# 如何开始用 C++ 写一个光栅化渲染器？ - UncP的回答 - 知乎](https://www.zhihu.com/question/24786878/answer/127484388)
+- [# 如何开始用 C++ 写一个光栅化渲染器？ - Zero的回答 - 知乎](https://www.zhihu.com/question/24786878/answer/401447840)
+- [# 游戏程序员学习之路](https://miloyip.github.io/game-programmer/game-programmer-zh-cn.svg)
