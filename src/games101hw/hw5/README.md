@@ -89,11 +89,11 @@ $$\begin{align*}
 之前作业中已经实现，但这里需要用 Moller Trumbore Algorithm计算交点，可以直接通过参数t、b_1、b_2来判断是否在平面内。
 
 - 参数t满足：$0\leq t < \infty$
-- 参数b_1和b_2满足：$b_1 > 0 \  and \ b_1 > 0 \ and \ (1-b_1-b_2)>0$
+- 参数b_1和b_2满足：$b_1 > 0 \  \&\& \ b_1 > 0 \ \&\& \ (1-b_1-b_2)>0$
 
 ## 生成每条像素对应的光线
 
-参考：[# rat tracing generating camera rays](https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-generating-camera-rays/generating-camera-rays.html)
+参考：[# ray tracing generating camera rays](https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-generating-camera-rays/generating-camera-rays.html)
 
 这里的详细过程在上边的参考链接。
 
