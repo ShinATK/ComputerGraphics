@@ -205,3 +205,123 @@ Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
 ## 运行结果
 
 ![hw6_output_bunny](img/hw6_output_bunny.png)
+
+## 加分项：SAH 查找
+
+自学 SAH (Surface Area Heuristic)
+
+正确实现 SAH 加速，并且提交结果图片，在 `README.md` 中说明 SVH 的实现方法，并对比 BVH、SVH 的时间开销。
+
+参考链接：
+- [# pbr-4.3 Bounding Volume Hierarchies](https://pbr-book.org/3ed-2018/Primitives_and_Intersection_Acceleration/Bounding_Volume_Hierarchies)
+- [# PBRT-E4.3-层次包围体(BVH)（一）](https://zhuanlan.zhihu.com/p/50720158)
+
+### Why SAH
+
+通过层级包围体结构（BVH）可以加速光线与场景的求交，但在BVH中存在着包围盒重叠的问题。如果空间中的物体分布很不均匀，BVH所得到的结构就不一定高效。
+
+SAH，surface area heurisitic，就是为了寻找具有最小包围盒重叠面的划分策略的评估方法
+
+这里给出简化后的公式：$$Cost = C_{trav}+\frac{S_A}{S_N}N_AC_{isect}+\frac{S_B}{S_N}N_BC_{isect}$$
+
+核心思想：
+- 沿着某一条选定的坐标轴进行均匀划分，划分的数量为超参数，每个划分区间被称为bucket；
+- 迭代每个bucket，以该bucket位置为基准划分左右两个包围盒，按照上方公式计算该划分方式下的cost
+- 选取具有最小cost的划分位置再建立BVH
+
+### 代码建立
+
+- 声明参数
+
+```cpp
+float SN = centroidBounds.SurfaceArea(); // 总面积
+int nBuckets = 10; // 划分的bucket个数
+int minCostIndex = 0; // 最小cost的索引
+float minCost = std::numeric_limits<float>::infinity(); // 用于更新最小cost
+```
+
+- 对划分的bucket进行迭代
+
+```cpp
+for (int i=0;i<nBuckets;++i){
+	auto beginning = objects.begin();
+	auto middling = objects.begin() + objects.size() * i/nBuckets; // 按照bucket的位置比例划分左右
+	auto ending = objects.end();
+
+	// 划分左右区间，分别建立bounding box
+	auto leftshapes = std::vector<Object*>(beginning, middling);
+	auto rightshapes = std::vector<Object*>(middling, ending);
+	Bounds3 leftBounds, rightBounds;
+	for (int k = 0; k < leftshapes.size(); ++k) {
+		leftBounds = Union(leftBounds, leftshapes[k]->getBounds().Centroid());
+	}
+	for (int k = 0; k < rightshapes.size(); ++k) {
+		rightBounds = Union(rightBounds, rightshapes[k]->getBounds().Centroid());
+	}
+
+	// 对该划分下计算cost，并记录最小cost对应的索引
+	float SA = leftBounds.SurfaceArea();
+	float SB = rightBounds.SurfaceArea();
+	float cost = 0.125f + (leftshapes.size() * SA + rightshapes.size() * SB) / SN;
+
+	if (cost < minCost) {
+		minCost = cost;
+		minCostIndex = i;
+	}
+}
+```
+
+- 选取最小cost对应索引位置建立BVH
+
+```cpp
+// 以最小cost对应索引为划分基准
+auto beginning = objects.begin();
+auto middling = objects.begin() + (objects.size() * minCostIndex / nBuckets);
+auto ending = objects.end();
+auto leftshapes = std::vector<Object*>(beginning, middling);
+auto rightshapes = std::vector<Object*>(middling, ending);
+assert(objects.size() == (leftshapes.size() + rightshapes.size()));
+// 建立节点
+node->left = recursiveBuild(leftshapes);
+node->right = recursiveBuild(rightshapes);
+node->bounds = Union(node->left->bounds, node->right->bounds);
+```
+
+### 运行结果
+
+- BVH
+
+```shell
+BVH Generation complete:
+Time Taken: 0 hrs, 0 mins, 0 secs
+
+ - Generating BVH...
+
+BVH Generation complete:
+Time Taken: 0 hrs, 0 mins, 0 secs
+
+Render complete: ======================================================] 100 %
+Time taken: 0 hours
+          : 0 minutes
+          : 10 seconds
+```
+
+- SAH
+
+```shell
+BVH Generation complete:
+Time Taken: 0 hrs, 0 mins, 1 secs
+
+ - Generating BVH...
+
+BVH Generation complete:
+Time Taken: 0 hrs, 0 mins, 0 secs
+
+Render complete: ======================================================] 100 %
+Time taken: 0 hours
+          : 0 minutes
+          : 9 seconds
+```
+
+对比发现，使用了SAH后构建时间加快了1s
+
