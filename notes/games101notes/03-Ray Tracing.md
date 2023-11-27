@@ -56,10 +56,93 @@ Whitted-Style Ray Tracing
 
 ### Recursive Ray tracing
 
+## Ray-object intersections
+
+### Implicit surfaces
+
+### Triangles
+
+## Axis-Aligned Bounding Boxs (AABB)
+
+
+# Acceleration & Radiometry
+
+- Using AABB to acelerate ray tracing
+	- Uniform grids
+	- Spatial paritions
+- Basic radiometry 辐射度量学
+
+## Uniform Spatial Partitions (Grids)
+
+### Preprocess-Build Acceleration Grid
+
+1. Find bounding box
+2. Create grid
+3. Store each object in overlapping cells
+
+![](img/Pasted%20image%2020231126084241.png)
 
 
 
+![](img/Pasted%20image%2020231126084435.png)
 
 
+# Light Transport & Global Illumination
 
+今天的一些内容：![](img/Pasted%20image%2020231126084530.png)
 
+## 回顾一些概念
+
+- Radient Energy（很少用）
+- Radiant Flux（power）
+	- *在图形学中更多应用单位时间内的能量*
+	- 这里的能量一般都是特质这里的power
+- Radiant Intensity
+	- 单位立体角的能量（power）
+- Solid Angle
+
+**微分立体角 differential solid angles**
+
+![](img/Pasted%20image%2020231126084817.png)
+
+主要关注两个角度：$\theta$ 和 $\phi$
+
+![](img/Pasted%20image%2020231126084942.png)
+
+*并不是对球面上的均匀划分*
+
+## Irradiance
+
+定义：![](img/Pasted%20image%2020231126085026.png)
+
+*面与光线垂直*，要将光线投影到垂直方向
+
+**Lambert's Consine Law**
+
+![Lambert's Consine Law](img/Pasted%20image%2020231126085146.png)
+
+光线与面的夹角，可以思考四季变化。
+
+回想光源向四周辐射能量，会随路径长度而损失
+
+![](img/Pasted%20image%2020231126085409.png)
+
+可以发现其实是*Irradiance*在衰减，而不是*intensity*
+
+## Radiance（非常重要）
+
+这个概念目的是描述光线的某个属性
+
+![](img/Pasted%20image%2020231126085504.png)
+
+下面是Radiance的定义
+
+![](img/Pasted%20image%2020231126085518.png)
+
+*单位立体角*与*单位投影面积*
+
+回顾之前学过的概念，并将这几个概念进行联合理解：![](img/Pasted%20image%2020231126085654.png)
+
+## Incident Radiance
+
+![](img/Pasted%20image%2020231126085844.png)
