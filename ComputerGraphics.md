@@ -1,12 +1,11 @@
-
 # 图形学入门
 
 **不要指望看个视频就能把所有理论公式都学会，仅当了解图形学里面有什么内容**
 
 先入门：
-- [ ] [# GAMES101: 现代计算机图形学入门 -UCSB 闫令琪](https://link.zhihu.com/?target=https%3A//sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
+- [# GAMES101: 现代计算机图形学入门 -UCSB 闫令琪](https://link.zhihu.com/?target=https%3A//sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
 - [Fundamentals of Computer Graphics, Fourth Edition](./pdf/Fundamentals%20of%20Computer%20Graphics,%20Fourth%20Edition.pdf)
-	- [ ] 参考部分
+	- 参考部分
 	- 整体回顾
 - [3D数学基础：图形和游戏开发（第2版）](3D数学基础：图形和游戏开发（第2版）.pdf)
 
