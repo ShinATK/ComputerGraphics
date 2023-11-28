@@ -1,0 +1,24 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "attachmentFolderPath": "./img",
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "newFileFolderPath": "每日记录",
+  "communityThemeSortOrder": "download",
+  "promptDelete": false,
+  "showUnsupportedFiles": true,
+  "showInlineTitle": true,
+  "autoPairMarkdown": false,
+  "autoPairBrackets": false,
+  "vimMode": false,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "useMarkdownLinks": false
+}
