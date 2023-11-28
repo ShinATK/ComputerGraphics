@@ -11,7 +11,7 @@
 
 # 确定思路
 
-参考：[03-RayTracing](../../../notes/games101notes/03-Ray%20Tracing.md)
+参考：[03-RayTracing](03-Ray%20Tracing.md)
 
 ## 计算交点
 
