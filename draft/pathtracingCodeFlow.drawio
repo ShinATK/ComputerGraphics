@@ -1,0 +1,210 @@
+<mxfile host="Electron" modified="2023-11-29T03:19:28.550Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="05_mlNS_9yU0xDhBxsba" version="22.1.2" type="device">
+  <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
+    <mxGraphModel dx="1760" dy="1838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Efny0dSnSNrsnhovs4ep-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-55" target="Efny0dSnSNrsnhovs4ep-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-55" value="PathTracing" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="70" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-56" value="cast a ray from pixel" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-58" target="Efny0dSnSNrsnhovs4ep-129">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-62" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Efny0dSnSNrsnhovs4ep-60">
+          <mxGeometry x="-0.7937" y="-3" relative="1" as="geometry">
+            <mxPoint x="41" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-58" target="Efny0dSnSNrsnhovs4ep-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-64" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Efny0dSnSNrsnhovs4ep-63">
+          <mxGeometry x="0.2384" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-58" value="hit a point?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="350" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-56" target="Efny0dSnSNrsnhovs4ep-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-68" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-65" target="Efny0dSnSNrsnhovs4ep-70">
+          <mxGeometry x="-0.5455" relative="1" as="geometry">
+            <mxPoint x="560" y="720" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-65" target="Efny0dSnSNrsnhovs4ep-76">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390.0000000000001" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-75" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Efny0dSnSNrsnhovs4ep-74">
+          <mxGeometry x="-0.2044" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-65" value="self emission?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="560" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-70" value="hit a light source, and calculate the emission term" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="650" y="710" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-71" value="end" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1010" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-70" target="Efny0dSnSNrsnhovs4ep-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-76" target="Efny0dSnSNrsnhovs4ep-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-76" target="Efny0dSnSNrsnhovs4ep-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-76" value="hit an object&lt;br&gt;consider direct or indirect light ray" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340" y="710" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-78" value="direct light ray" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="240" y="860" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-79" target="Efny0dSnSNrsnhovs4ep-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-79" value="indirect light ray" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="860" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-82" value="cast a ray from every light source to object" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="235" y="1040" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-84" target="Efny0dSnSNrsnhovs4ep-110">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="135" y="1310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-88" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Efny0dSnSNrsnhovs4ep-86">
+          <mxGeometry x="-0.3518" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-84" target="Efny0dSnSNrsnhovs4ep-92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-90" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Efny0dSnSNrsnhovs4ep-89">
+          <mxGeometry x="-0.1412" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-84" value="ray blocked?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1190" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-82" target="Efny0dSnSNrsnhovs4ep-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-92" target="Efny0dSnSNrsnhovs4ep-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-92" value="llight_dir = ..." style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1380" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-96" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-93" target="Efny0dSnSNrsnhovs4ep-97">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-93" value="cast a ray from object to every solid angle" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1040" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-99" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-97" target="Efny0dSnSNrsnhovs4ep-115">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-100" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Efny0dSnSNrsnhovs4ep-99">
+          <mxGeometry x="-0.2536" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-97" target="Efny0dSnSNrsnhovs4ep-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-97" value="hit object has emission?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1190" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-78" target="Efny0dSnSNrsnhovs4ep-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-110" target="Efny0dSnSNrsnhovs4ep-118">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="1480" />
+              <mxPoint x="370" y="1480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-110" value="light_dir = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-113" target="Efny0dSnSNrsnhovs4ep-118">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="1480" />
+              <mxPoint x="370" y="1480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-113" value="light_indir = ..." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-115" target="Efny0dSnSNrsnhovs4ep-118">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="1520" />
+              <mxPoint x="370" y="1520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-115" value="light_indir = 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-118" target="Efny0dSnSNrsnhovs4ep-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-118" value="return light_dir+light_indir" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1590" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-120" value="END" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1730" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-126" target="Efny0dSnSNrsnhovs4ep-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-126" value="return emission_term" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="650" y="880" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-128" value="end" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="670" y="480" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Efny0dSnSNrsnhovs4ep-129" target="Efny0dSnSNrsnhovs4ep-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Efny0dSnSNrsnhovs4ep-129" value="return none" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="500" y="480" width="100" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

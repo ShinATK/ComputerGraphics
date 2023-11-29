@@ -11,8 +11,6 @@
 
 # 确定思路
 
-参考：[03-RayTracing](03-Ray%20Tracing.md)
-
 ## 计算交点
 
 先来解决计算交点的问题，这一步简单，直接带入Moller-Trumbore算法公式计算即可。

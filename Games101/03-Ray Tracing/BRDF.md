@@ -1,3 +1,4 @@
+#cg 
 # BRDF: Bidirectional Reflectance Distribution Function
 
 ## Refelction at a Pint

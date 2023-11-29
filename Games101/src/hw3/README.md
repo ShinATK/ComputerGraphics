@@ -69,7 +69,7 @@ float zp = alpha * v[0].z() / v[0].w() + beta * v[1].z() / v[1].w() + gamma * v[
 zp *= Z;
 ```
 
-再将深度插值结果与z-buffer中的深度信息进行比较，并进行法向量、颜色、纹理颜色的插值计算。**注意**在计算 `shadingcoords` 时，使用的坐标是 view space 中的坐标，进行插值是为了还原在 camera space 中的坐标，[参考](https://games-cn.org/forums/topic/zuoye3-interpolated_shadingcoords/)。
+再将深度插值结果与z-buffer中的深度信息进行比较，并进行法向量、颜色、纹理颜色的插值计算。**注意**在计算 `shadingcoords` 时，使用的坐标是 view space 中的坐标，进行插值是为了还原在 camera space 中的坐标，[# 参考](https://games-cn.org/forums/topic/zuoye3-interpolated_shadingcoords/)。
 
 最后更新pixel的颜色和z-buffer中的深度信息即可。
 
@@ -99,7 +99,7 @@ if (zp <depth_buf[get_index(x,y)]){
 
 - `./Rasterizer output.png normal`
 
-<img src=./img/normal_output.png width=50%>
+![normal_output.png](normal_output.png)
 
 ### 问题
 
@@ -111,12 +111,8 @@ if (zp <depth_buf[get_index(x,y)]){
 
 实现Blinn-Phong模型：`phong_fragment_shader() in main.cpp`
 
-参考笔记：[Shading 着色](Shading%20着色.md)
-
 用到公式如下：
 **环境光项+漫反射项+高光项=Blinn-Phong反射模型**
-
-![Blinn-Phong反射模型](Blinn-Phong反射模型.png)
 
 **需要注意**：除了计算 distance decay 的时候，light 到 point 的长度计算要用到非归一化的向量，其他的如法向量n，point到light的向量，以及半程向量等都需要进行归一化即 `vector.normalized()`
 
@@ -161,11 +157,11 @@ Eigen::Vector3f ks = Eigen::Vector3f(0.7937, 0.7937, 0.7937);
 
 -  `./Rasterizer output.png phong`
 
-<img src=./img/phong_output.png width=50%>
+![phong_output.png](phong_output.png)
 
 - `./Rasterizer output.png texture`
 
-<img src=./img/texture_output.png width=50%>
+![texture_output.png](texture_output.png)
 
 ### 问题
 
@@ -201,8 +197,6 @@ Error: Assertion failed ((unsigned)(i1 * DataType<_Tp>::channels) < (unsigned)(s
 ## 第三步
 
 `bump_fragment_shader() in main.cpp`
-
-凹凸贴图具体参考笔记：[TextureMapping 纹理映射](./img/TextureMapping%20纹理映射.md)
 
 主要思路是根据texture上的差值计算dU和dV，所以需要获得tex_coords坐标，最后通过TBN变换矩阵改变发现朝向从而在人的视觉感官上改变物体表面的凹凸感
 
@@ -245,11 +239,11 @@ normal = (TBN * ln).normalized();
 
 -  `./Rasterizer output.png bump`
 -  
-<img src=./img/bump_output.png width=50%>
+![bump_output.png](bump_output.png)
 
 -  `./Rasterizer output.png displacement`
 
-<img src=./img/displacement_output.png width=50%>
+![displacement_output.png](displacement_output.png )
 
 ## 提高项
 
@@ -265,5 +259,5 @@ normal = (TBN * ln).normalized();
 
 vs 2019中，通过 `调试->属性` 进行修改命令行参数即可
 
-<img src=./img/VS中调试-属性，修改命令参数.png width=65%>
+![VS中调试-属性，修改命令参数.png](VS中调试-属性，修改命令参数.png)
 
