@@ -21,7 +21,7 @@
 			- [Developing a Software Renderer](https://trenki2.github.io/blog/2017/06/06/developing-a-software-renderer-part1/)
 			- 搞明白摄像机设置、矩阵转换、剔除、光栅化、深度/模板测试、贴图等概念
 			- 到此，要搞明白*基于光栅化的渲染*和*基于光线追踪的渲染*
-
+- [GAMES202-高质量实时渲染\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1YK4y1T7yY/?spm_id_from=333.999.0.0)
 # 图形学API
 
 OpenGL、DirectX、Vulkan

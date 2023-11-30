@@ -5,6 +5,7 @@ A **methodological basis**, for solid modeling and image rendering.
 
 The most basic of many geometric ray tracing algorithms.
 
+---
 
 # Why Ray Casting?
 
@@ -12,7 +13,9 @@ It is *simple* and *fast*.
 
 no need to recursive computing additional rays
 
-which means there will be many details lost.
+which means there will be many *details lost*.
+
+---
 
 # How to do Ray Casting?
 
