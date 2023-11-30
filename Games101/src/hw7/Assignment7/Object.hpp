@@ -22,9 +22,7 @@ public:
     virtual void getSurfaceProperties(const Vector3f &, const Vector3f &, const uint32_t &, const Vector2f &, Vector3f &, Vector2f &) const = 0;
     virtual Vector3f evalDiffuseColor(const Vector2f &) const =0;
     virtual Bounds3 getBounds()=0;
-    // getArea 对光源按面积采样
     virtual float getArea()=0;
-    // Sample 采样函数
     virtual void Sample(Intersection &pos, float &pdf)=0;
     virtual bool hasEmit()=0;
 };

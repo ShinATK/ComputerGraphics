@@ -15,7 +15,6 @@ private:
     // Compute reflection direction
     Vector3f reflect(const Vector3f &I, const Vector3f &N) const
     {
-        // I dot N is negative, so I minus this
         return I - 2 * dotProduct(I, N) * N;
     }
 
@@ -87,12 +86,12 @@ private:
     }
 
 public:
-    MaterialType m_type; // 材质类型，目前只有一个diffuse类型
+    MaterialType m_type;
     //Vector3f m_color;
-    Vector3f m_emission; // 材质自发光
-    float ior; // 材质的折射率
-    Vector3f Kd, Ks; // 漫反射和高光项
-    float specularExponent; // 高光项指数
+    Vector3f m_emission;
+    float ior;
+    Vector3f Kd, Ks;
+    float specularExponent;
     //Texture tex;
 
     inline Material(MaterialType t=DIFFUSE, Vector3f e=Vector3f(0,0,0));
@@ -103,7 +102,7 @@ public:
     inline bool hasEmission();
 
     // sample a ray by Material properties
-    inline Vector3f sample(const Vector3f &wi, const Vector3f &N); // 光线击中某点后，继续随即弹射的方向
+    inline Vector3f sample(const Vector3f &wi, const Vector3f &N);
     // given a ray, calculate the PdF of this ray
     inline float pdf(const Vector3f &wi, const Vector3f &wo, const Vector3f &N);
     // given a ray, calculate the contribution of this ray

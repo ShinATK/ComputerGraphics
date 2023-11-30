@@ -129,7 +129,6 @@ Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
     Intersection right_leaf = BVHAccel::getIntersection(node->right, ray);
 
     return (left_leaf.distance < right_leaf.distance) ? left_leaf : right_leaf;
-
 }
 
 

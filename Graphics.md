@@ -5,29 +5,29 @@
 - 初步了解：
 - [GAMES101: 现代计算机图形学入门 -UCSB 闫令琪](https://link.zhihu.com/?target=https%3A//sites.cs.ucsb.edu/~lingqi/teaching/games101.html)
 	- notes:
-		- [01-Rasterization](01-Rasterization.md)
-		- [02-Geometry](02-Geometry.md)
+		- [[01-Rasterization]]
+		- [[02-Geometry]]
 		- [[03-Ray Tracing]]
-		- [04-Animation Simulation](04-Animation%20Simulation.md)
-- [Fundamentals of Computer Graphics, Fourth Edition](Fundamentals%20of%20Computer%20Graphics,%20Fourth%20Edition.pdf)
-- [3D数学基础：图形和游戏开发（第2版）](3D数学基础：图形和游戏开发（第2版）.pdf)
+		- [[04-Animation Simulation]]
+- [[Fundamentals of Computer Graphics, Fourth Edition.pdf]]
+- [[3D数学基础：图形和游戏开发（第2版）.pdf]]
 
 - 入门：
-	- [计算机图形学 第4版](计算机图形学%20第4版.pdf)
-		- 原理+OpenGL例子
-		- 全局光照部分参考[链接](https://www.kevinbeason.com/smallpt/)，写一个基于PathTracing的光线追踪渲染器
+	- [[计算机图形学 第4版.pdf]]
+		- 原理+OpenGL 例子
+		- 全局光照部分参考[链接](https://www.kevinbeason.com/smallpt/)，写一个基于 PathTracing 的光线追踪渲染器
 		- 软渲染部分参考链接，分别对应两个不同的渲染流派：
 			- [3D C/C++ tutorials - Software rendering](http://www.3dcpptutorials.sk/index.php?id=15)
 			- [Developing a Software Renderer](https://trenki2.github.io/blog/2017/06/06/developing-a-software-renderer-part1/)
 			- 搞明白摄像机设置、矩阵转换、剔除、光栅化、深度/模板测试、贴图等概念
 			- 到此，要搞明白*基于光栅化的渲染*和*基于光线追踪的渲染*
-- [GAMES202-高质量实时渲染\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1YK4y1T7yY/?spm_id_from=333.999.0.0)
-# 图形学API
+	- [GAMES202-高质量实时渲染](https://www.bilibili.com/video/BV1YK4y1T7yY/?spm_id_from=333.999.0.0)
+# 图形学 API
 
 OpenGL、DirectX、Vulkan
 
 - [Learning OpenGL](https://learnopengl-cn.github.io/)
-- RayTracing in one weekend等三本书（Peter Ray tracing 三部曲）
+- RayTracing in one weekend 等三本书（Peter Ray tracing 三部曲）
 
 - Home · ssloy/tinyrenderer Wiki (github.com)
 
@@ -35,7 +35,7 @@ OpenGL、DirectX、Vulkan
 
 # 图形学进阶
 
-**确保自己真正学会了Learning OpenGL和光追三部曲这些教程里的内容**
+**确保自己真正学会了 Learning OpenGL 和光追三部曲这些教程里的内容**
 
 **圣经**：
 - [PBRT V3 — 从零到完全吃透系列](https://dezeming.top/?page_id=50)
@@ -50,7 +50,7 @@ OpenGL、DirectX、Vulkan
 
 # 专业阶段
 
-专业阶段 《GPU Germs》
+专业阶段《GPU Germs》
 
 《RayTracing Gems》
 

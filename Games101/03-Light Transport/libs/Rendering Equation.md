@@ -26,18 +26,18 @@ $$\begin{align}
 
 - Replace $L_i(x,\omega_i)$ with $L_r(x',-\omega_i)$, and the direction is inversed.
 
-![Understanding the Rendering Equation](Understanding%20of%20rendering%20equation.png)
+![Understanding of rendering equation](../img/Understanding%20of%20rendering%20equation.png)
 
 - Some math operations, rewrite the Rendering Equation
 
-![Linear Operator Equation](LinearOperatorEquation.png)
+![Linear Operator Equation](../img/LinearOperatorEquation.png)
 
 - Be discretized to a simple matrix equation (or system of simultaneous linear equations)
 - L, E are vectors, K is the light transport matrix
 $$L = E + KL$$
-![RayTracing & Extensions](RayTracing&Extensions.png)
+![RayTracing & Extensions](../img/RayTracing&Extensions.png)
 
-![RayTracing](RayTracing.png)
+![RayTracing](../img/RayTracing.png)
 
 - global illumination = dir + indir illumination
 
