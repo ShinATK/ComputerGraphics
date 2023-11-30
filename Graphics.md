@@ -8,6 +8,7 @@
 		- [01-Rasterization](01-Rasterization.md)
 		- [02-Geometry](02-Geometry.md)
 		- [[03-Ray Tracing]]
+		- [04-Animation Simulation](04-Animation%20Simulation.md)
 - [Fundamentals of Computer Graphics, Fourth Edition](Fundamentals%20of%20Computer%20Graphics,%20Fourth%20Edition.pdf)
 - [3D数学基础：图形和游戏开发（第2版）](3D数学基础：图形和游戏开发（第2版）.pdf)
 
