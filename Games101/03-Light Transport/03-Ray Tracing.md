@@ -55,7 +55,7 @@ Let's recall our ray-surface intersection,
 - find the cloest hit (i.e. minimum t)
 
 A serious problem, *check every triangle is really waste of time*.
-- like, $\#pixels \times \#triangles \times \#light\_bounces$
+- like, \#pixels X \#triangles X \#light\_bounces
 - Is there any way to accelerate, or saying *avoid useless calculation*s?
 
 ## Accelerating Ray-Surface Intersection
@@ -168,7 +168,7 @@ We just need to *call this function recursively*!
 
 #### Some Constraints
 
-##### Problem 1: Explosion of $\#rays$ as $\#bounces$ go up
+##### Problem 1: Explosion of \#rays as #bounces go up
 
 **[[Path Tracing]]**
 ![Problem-01: Explosion of ray number](./img/Pasted%20image%2020231130210245.png)
