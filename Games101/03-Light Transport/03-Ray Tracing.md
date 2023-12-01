@@ -73,7 +73,7 @@ If not, there is definitly no way to have a intersection between ray and object.
 - Grids
 
 - Oct-Tree
-- [[KD-Tree]]
+- [KD-Tree](KD-Tree.md)
 - BSP-Tree
 
 ### Object Partitions
