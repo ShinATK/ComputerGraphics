@@ -171,6 +171,7 @@ We just need to *call this function recursively*!
 ##### Problem 1: Explosion of \#rays as #bounces go up
 
 **[Path Tracing](Path%20Tracing.md)**
+
 ![Problem-01: Explosion of ray number](./img/Pasted%20image%2020231130210245.png)
 
 - Set $N=1$, **Path Tracing!** Only 1 ray is traced at each shading point.
@@ -186,7 +187,7 @@ Trace *more paths* through each pixel and average radiance.
 
 ##### Problem 3: Stop the Recursive Algorithm
 
-Because the Conservation of energy, we can't just cut off some part of $\#bounces$.
+Because the Conservation of energy, we can't just cut off some part of \#bounces.
 
 *But we can stop bouncing with probability $p$*.
 
