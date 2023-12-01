@@ -123,7 +123,7 @@ for each_pixel in Box:
 - Signals are changing *too fast*(high frequency)
 - But *sampled too slowly*
 
-### Antialiasing Idea: Blurring (./img/Pre-Filtering) before Sampling
+### Antialiasing Idea: Blurring (Pre-Filtering) before Sampling
 
 观察下图：
 
