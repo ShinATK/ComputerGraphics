@@ -1,5 +1,7 @@
 # 作业3 Pipeline and Shading
 
+#cg 
+
 # 问题
 
 1. 修改函数 `rasterize_triangle(const Triangle& t) in rasterizer.cpp` ：实现与作业2类似的插值算法，实现*法向量*、*颜色*、*纹理颜色*的插值。

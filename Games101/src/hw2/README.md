@@ -1,5 +1,7 @@
 # 作业2 Triangle and Z-Buffering
 
+#cg 
+
 ## 问题
 
 > 自行填写并调用函数 `rasterize_triangle(const Triangle& t)` 在屏幕上栅格化一个实心三角形。

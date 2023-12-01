@@ -42,7 +42,7 @@ But in Ray Casting, it just about the direct illumination of the light source. W
 
 ### Recursive Ray Tracing
 
-We know the [Ray Casting](Ray%20Casting.md) algorithm determined the ray color without recursively tracing more rays. And [Recursive Ray Tracing](Recursive%20Ray%20Tracing.md) or Whitted-Style Ray Tracing continues the process.
+We know the [Ray Casting](./libs/Ray%20Casting.md) algorithm determined the ray color without recursively tracing more rays. And [Recursive Ray Tracing](Recursive%20Ray%20Tracing.md) or Whitted-Style Ray Tracing continues the process.
 
 And this algorithm seems not bad. So it is time to think about how to describe a ray hits an object.
 
@@ -159,7 +159,7 @@ Rethinking about the equation that we finally had of the Direct Illumination.
 
 In face, it's not just representing for the Direct Illumination, but and really for *the proportional of $L_i$ and $L_o$ of the hit point*.
 
-![Global Illumination](./img/Pasted%20image%2020231130205956.png)
+![Global Illumination](Pasted%20image%2020231130205956.png)
 
 - Q also reflects light to P! How much?
 - *The dir.illum. at Q!*
@@ -168,11 +168,11 @@ We just need to *call this function recursively*!
 
 #### Some Constraints
 
-##### Problem 1: Explosion of \#rays as #bounces go up
+##### Problem 1: Explosion of \#rays as \#bounces go up
 
 **[Path Tracing](Path%20Tracing.md)**
 
-![Problem-01: Explosion of ray number](./img/Pasted%20image%2020231130210245.png)
+![Problem-01: Explosion of ray number](Pasted%20image%2020231130210245.png)
 
 - Set $N=1$, **Path Tracing!** Only 1 ray is traced at each shading point.
 - $N != 1$, Distributed Ray Tracing
@@ -183,7 +183,7 @@ We just need to *call this function recursively*!
 
 Trace *more paths* through each pixel and average radiance.
 
-![Noisy-trace more paths](./img/Pasted%20image%2020231130210512.png)
+![Noisy-trace more paths](Pasted%20image%2020231130210512.png)
 
 ##### Problem 3: Stop the Recursive Algorithm
 
@@ -205,9 +205,9 @@ Here is one thing need to remember, radiance coming from two parts:
 
 ##### Problem 4: Inefficient
 
-![Low&High SPP](./img/Pasted%20image%2020231130211339.png)
+![Low&High SPP](Pasted%20image%2020231130211339.png)
 
-Reason: ![Inefficient Reason](./img/Pasted%20image%2020231130211415.png)
+Reason: ![Inefficient Reason](Pasted%20image%2020231130211415.png)
 
 If the light source is too small, there are going to waste a lot of rays when we uniformly sample the hemisphere at the shading point.
 
@@ -227,11 +227,18 @@ So, we can have the unit light area that projected on the sphere, and we can eas
 
 $$\mathrm{d}\omega = \frac{\mathrm{d}A \cos\theta'}{||x'-x||^2}$$
 
-![Sampling the light](./img/Pasted%20image%2020231130211718.png)
+![Sampling the light](Pasted%20image%2020231130211718.png)
 
 And one more thing: *care about the ray if is blocked in the middle before it hits the target point*.
 
 ---
 
+# Games101 作业
 
+- 作业 5：光线与三角形相交
+	- [README](Graphics/Games101/src/hw5/README.md)
+- 作业 6：加速结构
+	- [README](Graphics/Games101/src/hw6/README.md)
+- 作业 7：路径追踪
+	- [README](Graphics/Games101/src/hw7/README.md)
 
