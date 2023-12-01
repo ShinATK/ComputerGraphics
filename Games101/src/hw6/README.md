@@ -44,7 +44,7 @@ framebuffer[m++] = castRay(eye_pos, dir, scene, 0);
 
 #### 判断包围盒BoundingBox与光线是否相交
 
-`IntersectP(const Ray &ray, const Vector3f& invDir, const std::array<int, 3>& dirIsNeg)`
+`IntersectP(...)`
 
 该函数的目的是判断包围盒BoundingBox与光线是否相交，返回bool值。
 
@@ -244,10 +244,13 @@ float minCost = std::numeric_limits<float>::infinity(); // 用于更新最小cos
 
 ```cpp
 for (int i=0;i<nBuckets;++i){
-	auto beginning = objects.begin();
-	auto middling = objects.begin() + objects.size() * i/nBuckets; // 按照bucket的位置比例划分左右
-	auto ending = objects.end();
 
+	auto beginning = objects.begin();
+	auto ending = objects.end();
+	
+	// 按照bucket的位置比例划分左右
+	auto middling = objects.begin() + objects.size() * i/nBuckets; 
+	
 	// 划分左右区间，分别建立bounding box
 	auto leftshapes = std::vector<Object*>(beginning, middling);
 	auto rightshapes = std::vector<Object*>(middling, ending);
