@@ -16,15 +16,17 @@ const float EPSILON = 0.00001;
 // framebuffer is saved to a file.
 void Renderer::Render(const Scene& scene)
 {
+    //设置 framebuffer 大小
     std::vector<Vector3f> framebuffer(scene.width * scene.height);
 
+    //计算像素对应三维坐标位置时需要的参数
     float scale = tan(deg2rad(scene.fov * 0.5));
     float imageAspectRatio = scene.width / (float)scene.height;
     Vector3f eye_pos(278, 273, -800);
-    int m = 0;
+    int m = 0;//framebuffer 中的 index
 
     // change the spp value to change sample ammount
-    int spp = 32;
+    int spp = 8;//每个像素进行采样的个数
     std::cout << "SPP: " << spp << "\n";
     for (uint32_t j = 0; j < scene.height; ++j) {
         for (uint32_t i = 0; i < scene.width; ++i) {
@@ -33,8 +35,9 @@ void Renderer::Render(const Scene& scene)
                       imageAspectRatio * scale;
             float y = (1 - 2 * (j + 0.5) / (float)scene.height) * scale;
 
+            //将 ray 的方向变为从 point 指向 pixel
             Vector3f dir = normalize(Vector3f(-x, y, 1));
-            for (int k = 0; k < spp; k++){
+            for (int k = 0; k < spp; k++){//对像素的每一个采样 path 结果进行平均
                 framebuffer[m] += scene.castRay(Ray(eye_pos, dir), 0) / spp;  
             }
             m++;

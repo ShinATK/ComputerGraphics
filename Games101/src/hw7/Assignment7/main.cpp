@@ -25,12 +25,12 @@ int main(int argc, char** argv)
     Material* light = new Material(DIFFUSE, (8.0f * Vector3f(0.747f+0.058f, 0.747f+0.258f, 0.747f) + 15.6f * Vector3f(0.740f+0.287f,0.740f+0.160f,0.740f) + 18.4f *Vector3f(0.737f+0.642f,0.737f+0.159f,0.737f)));
     light->Kd = Vector3f(0.65f);
 
-    MeshTriangle floor("D:\\Obsidian\\ComputerGraphics\\Games101\\src\\hw7\\PA7\\Assignment7\\models\\cornellbox\\floor.obj", white);
-    MeshTriangle shortbox("D:\\Obsidian\\ComputerGraphics\\Games101\\src\\hw7\\PA7\\Assignment7\\models\\cornellbox\\shortbox.obj", white);
-    MeshTriangle tallbox("D:\\Obsidian\\ComputerGraphics\\Games101\\src\\hw7\\PA7\\Assignment7\\models\\cornellbox\\tallbox.obj", white);
-    MeshTriangle left("D:\\Obsidian\\ComputerGraphics\\Games101\\src\\hw7\\PA7\\Assignment7\\models\\cornellbox\\left.obj", red);
-    MeshTriangle right("D:\\Obsidian\\ComputerGraphics\\Games101\\src\\hw7\\PA7\\Assignment7\\models\\cornellbox\\right.obj", green);
-    MeshTriangle light_("D:\\Obsidian\\ComputerGraphics\\Games101\\src\\hw7\\PA7\\Assignment7\\models\\cornellbox\\light.obj", light);
+    MeshTriangle floor("D:\\Obsidian\\Graphics\\Games101\\src\\hw7\\Assignment7\\models\\cornellbox\\floor.obj", white);
+    MeshTriangle shortbox("D:\\Obsidian\\Graphics\\Games101\\src\\hw7\\Assignment7\\models\\cornellbox\\shortbox.obj", white);
+    MeshTriangle tallbox("D:\\Obsidian\\Graphics\\Games101\\src\\hw7\\Assignment7\\models\\cornellbox\\tallbox.obj", white);
+    MeshTriangle left("D:\\Obsidian\\Graphics\\Games101\\src\\hw7\\Assignment7\\models\\cornellbox\\left.obj", red);
+    MeshTriangle right("D:\\Obsidian\\Graphics\\Games101\\src\\hw7\\Assignment7\\models\\cornellbox\\right.obj", green);
+    MeshTriangle light_("D:\\Obsidian\\Graphics\\Games101\\src\\hw7\\Assignment7\\models\\cornellbox\\light.obj", light);
 
     scene.Add(&floor);
     scene.Add(&shortbox);

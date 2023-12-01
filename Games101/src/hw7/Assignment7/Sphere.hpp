@@ -78,11 +78,19 @@ public:
                        Vector3f(center.x+radius, center.y+radius, center.z+radius));
     }
     void Sample(Intersection &pos, float &pdf){
+        // 这里是数学坐标中对应的 theta 和 phi
+        // theta 方位角，phi 极角（与 y 轴）
+        // 从光源表面采样，计算相对于球心的方向
         float theta = 2.0 * M_PI * get_random_float(), phi = M_PI * get_random_float();
         Vector3f dir(std::cos(phi), std::sin(phi)*std::cos(theta), std::sin(phi)*std::sin(theta));
+
+        // 计算采样位置的坐标
         pos.coords = center + radius * dir;
+        // 采样位置对应的法线方向
         pos.normal = dir;
+        // 采样位置的emission
         pos.emit = m->getEmission();
+        // 采样概率密度
         pdf = 1.0f / area;
     }
     float getArea(){
