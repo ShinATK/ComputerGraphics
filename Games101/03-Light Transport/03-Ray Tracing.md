@@ -189,10 +189,10 @@ Trace *more paths* through each pixel and average radiance.
 
 Because the Conservation of energy, we can't just cut off some part of \#bounces.
 
-*But we can stop bouncing with probability $p$*.
+*But we can stop bouncing with probability* $p$.
 
 And we say, 
-- With probability $P$, shoot a ray and return the *shading result divided by $P$*: $L_o/P$
+- With probability $P$, shoot a ray and return the *shading result divided by* $P$: $L_o/P$
 - With probability $1-P$, don't shoot a ray and return 0
 
 We can still expect to get $L_o$:
