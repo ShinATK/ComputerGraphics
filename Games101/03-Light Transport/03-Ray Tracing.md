@@ -36,19 +36,19 @@ I think this is the most obvious and basic thing that should always keep in mind
 
 ### Ray Casting
 
-The basic thing for geometric ray tracing algorithm is [[Ray Casting]]. Follow the light path, we will find the light source.
+The basic thing for geometric ray tracing algorithm is [Ray Casting](Ray%20Casting.md). Follow the light path, we will find the light source.
 
 But in Ray Casting, it just about the direct illumination of the light source. What about reflection from other objects and so on?
 
 ### Recursive Ray Tracing
 
-We know the [[Ray Casting]] algorithm determined the ray color without recursively tracing more rays. And [[Recursive Ray Tracing]] or Whitted-Style Ray Tracing continues the process.
+We know the [Ray Casting](Ray%20Casting.md) algorithm determined the ray color without recursively tracing more rays. And [Recursive Ray Tracing](Recursive%20Ray%20Tracing.md) or Whitted-Style Ray Tracing continues the process.
 
 And this algorithm seems not bad. So it is time to think about how to describe a ray hits an object.
 
 ### Ray-Surface Intersection
 
-We have the ray tracing algorithm, then think about *how to determine a ray has an intersection with a surface*, in short [[Ray-Surface Intersection]]
+We have the ray tracing algorithm, then think about *how to determine a ray has an intersection with a surface*, in short [Ray-Surface Intersection](Ray-Surface%20Intersection.md)
 
 Let's recall our ray-surface intersection,
 - exhaustively check intersection with every triangle
@@ -64,7 +64,7 @@ Sure there is!
 
 ### Bounding Volumes
 
-We can find a larger region, says [[Bounding Volumes]], that can barely hold the object, and determine if the ray has an intersection with this region. 
+We can find a larger region, says [Bounding Volumes](Bounding%20Volumes.md), that can barely hold the object, and determine if the ray has an intersection with this region. 
 
 If not, there is definitly no way to have a intersection between ray and object.
 
@@ -170,7 +170,7 @@ We just need to *call this function recursively*!
 
 ##### Problem 1: Explosion of \#rays as #bounces go up
 
-**[[Path Tracing]]**
+**[Path Tracing](Path%20Tracing.md)**
 ![Problem-01: Explosion of ray number](./img/Pasted%20image%2020231130210245.png)
 
 - Set $N=1$, **Path Tracing!** Only 1 ray is traced at each shading point.
