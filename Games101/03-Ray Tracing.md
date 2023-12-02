@@ -48,7 +48,7 @@ And this algorithm seems not bad. So it is time to think about how to describe a
 
 ### Ray-Surface Intersection
 
-We have the ray tracing algorithm, then think about *how to determine a ray has an intersection with a surface*, in short [Ray-Surface Intersection](Ray-Surface%20Intersection.md)
+We have the ray tracing algorithm, then think about *how to determine a ray has an intersection with a surface*, in short [Ray-Surface Intersection](./libs/Ray-Surface%20Intersection.md)
 
 Let's recall our ray-surface intersection,
 - exhaustively check intersection with every triangle
