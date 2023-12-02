@@ -10,10 +10,10 @@
 		- [03-Ray Tracing](03-Ray%20Tracing.md)
 		- [04-Animation Simulation](04-Animation%20Simulation.md)
 - [Fundamentals of Computer Graphics, Fourth Edition](Fundamentals%20of%20Computer%20Graphics,%20Fourth%20Edition.pdf)
-- [3D数学基础：图形和游戏开发（第2版）](3D数学基础：图形和游戏开发（第2版）.pdf)
+- [3D 数学基础：图形和游戏开发（第 2 版）](3D数学基础：图形和游戏开发（第2版）.pdf)
 
 - 入门：
-	- [计算机图形学 第4版](计算机图形学%20第4版.pdf)
+	- [计算机图形学 第 4 版](计算机图形学%20第4版.pdf)
 		- 原理+OpenGL 例子
 		- 全局光照部分参考[链接](https://www.kevinbeason.com/smallpt/)，写一个基于 PathTracing 的光线追踪渲染器
 		- 软渲染部分参考链接，分别对应两个不同的渲染流派：
