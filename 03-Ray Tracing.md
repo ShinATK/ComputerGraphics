@@ -1,4 +1,4 @@
-#cg
+#cg #games101
 
 # What is Ray Tracing?
 

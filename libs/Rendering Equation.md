@@ -1,5 +1,4 @@
-#cg 
-
+#cg #games101
 # Why need Rendering Equation?
 
 *True photorealism occurs when the [rendering equation](https://en.wikipedia.org/wiki/Rendering_equation "Rendering equation") is closely approximated or fully implemented.*

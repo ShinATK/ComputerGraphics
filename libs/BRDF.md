@@ -1,4 +1,4 @@
-#cg 
+#cg #games101
 # BRDF: Bidirectional Reflectance Distribution Function
 
 ## Refelction at a Pint

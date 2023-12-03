@@ -1,6 +1,6 @@
 # 作业 2：Triangle and Z-Buffering
 
-#cg 
+#cg #games101
 
 ## 问题
 

@@ -1,4 +1,4 @@
-#cg
+#cg #games101
 # What is Ray Casting?
 
 A **methodological basis**, for solid modeling and image rendering.

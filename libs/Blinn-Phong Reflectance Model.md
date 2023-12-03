@@ -1,4 +1,4 @@
-#cg 
+#cg #games101
 # Diffuse term: Lambertian (Diffuse) Shading
 
 认为*shading和view方向无关*

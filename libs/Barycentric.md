@@ -1,5 +1,4 @@
-#cg 
-
+#cg #games101
 重心坐标的定义：
 
 ![Barycentric](../img/Pasted%20image%2020231201181448.png)
