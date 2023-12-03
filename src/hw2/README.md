@@ -1,4 +1,4 @@
-# 作业2 Triangle and Z-Buffering
+# 作业 2：Triangle and Z-Buffering
 
 #cg 
 

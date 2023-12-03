@@ -1,4 +1,4 @@
-# 作业 4 Bezier 曲线
+# 作业 4：Bezier 曲线
 
 #cg 
 
