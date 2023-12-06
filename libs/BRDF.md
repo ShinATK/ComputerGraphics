@@ -5,7 +5,7 @@
 
 Radiance from direction $\omega_i$ turns into the power $E$ that $\mathrm{d}A$ receives. Then power $E$ will become the radiance to *any other direction $\omega_o$*.
 
-![Reflection at a Point](Reflection%20at%20a%20Point.png)
+![Reflection at a Point](../img/Reflection%20at%20a%20Point.png)
 
 - Differential irradiance *incoming*: $$\mathrm{d}E(\omega_i)=L(\omega_i)\cos\theta_i\mathrm{d}\omega_i$$
 - Differential radiance *exiting* (due to $\mathrm{d}E(\omega_i)$):$$\mathrm{d}E(\omega_i) \to \mathrm{d}L_r(\omega_r)$$
@@ -16,13 +16,13 @@ Radiance from direction $\omega_i$ turns into the power $E$ that $\mathrm{d}A$ r
 
 $$f_r(\omega_i\to\omega_r)=\frac{\mathrm{d}L_r(\omega_r)}{\mathrm{d}E_i(\omega_i)}=\frac{\mathrm{d}L_r(\omega_r)}{L_i(\omega_i)\cos\theta_i\mathrm{d}\omega_i}$$
 
-![BRDF](BRDF.png)
+![BRDF](../img/BRDF.png)
 
 ## The Reflection Equation
 
 $$L_r(p,\omega_r)=\int_{H^2}f_r(p,\omega_i\to\omega_r)L_i(p,\omega_i)\cos\theta_i\mathrm{d}\omega_i$$
 
-![The Reflection Equation](The%20Reflection%20Equation.png)
+![The Reflection Equation](../img/The%20Reflection%20Equation.png)
 
 But it's a **Recursive** Equation!
 
