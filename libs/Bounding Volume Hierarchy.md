@@ -11,4 +11,4 @@
 
 
 
-![Summary: Building BVHs](Pasted%20image%2020231130174804.png)
+![Summary: Building BVHs](../img/Pasted%20image%2020231130174804.png)

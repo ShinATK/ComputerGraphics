@@ -11,7 +11,7 @@ In 3D, it's a **Cuboid**. In 2D, it's a **Rectangle**. In dynamical simulation, 
 
 Most of all, it must be a simple shape.
 
-![Bounding Regionm](Pasted%20image%2020231129172602.png)
+![Bounding Regionm](../img/Pasted%20image%2020231129172602.png)
 
 # Why need Bounding Volumes?
 
@@ -31,7 +31,7 @@ But here I just talk about a 3D bounding area for now.
 
 Box, is the intersection of 3 pairs of slabs.
 
-![Bounding Box](Pasted%20image%2020231129173420.png)
+![Bounding Box](../img/Pasted%20image%2020231129173420.png)
 
 Specifically, **Axis-Aligned Bounding Box (AABB)** is often used.
 
@@ -41,7 +41,7 @@ Specifically, **Axis-Aligned Bounding Box (AABB)** is often used.
 
 Here are schematic diagrams, 2D examples, but 3D is the same.
 
-![Ray-AxisAlignedBox Intersection, 2D](Pasted%20image%2020231129173711.png)
+![Ray-AxisAlignedBox Intersection, 2D](../img/Pasted%20image%2020231129173711.png)
 
 - Left one, ray intersects with line $x=x_0$ and $x=x_1$, two intersections, $t_{x_{min}}$ and $t_{x_{max}}$.
 - Mid one, with line $y=y_0$ and $y=y_1$, two intersections, $t_{y_{min}}$ and $t_{y_{max}}$.

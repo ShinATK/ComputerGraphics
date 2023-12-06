@@ -40,17 +40,17 @@ $$\begin{align}
 
 $$E(x) \equiv \frac{\mathrm{d}\Phi(x)}{\mathrm{d}A}$$
 
-![Irradiance](Irradiance.png)
+![Irradiance](../img/Irradiance.png)
 
 ## Lambert's Cosine Law
 
 - **Irradiance** at surface is proportional to cosine of angle between light direction and surface normal.
 
-![Lambert's Cosine Law](Lambert's%20Cosine%20Law.png)
+![Lambert's Cosine Law](../img/Lambert's%20Cosine%20Law.png)
 
 ## Correction: Irradiance Falloff
 
-![Irradiance Falloff](Irradiance%20Falloff.png)
+![Irradiance Falloff](../img/Irradiance%20Falloff.png)
 # Radiance
 
 - The fundamental field quantity that describes the distribution of light in an environment
@@ -63,7 +63,7 @@ $$E(x) \equiv \frac{\mathrm{d}\Phi(x)}{\mathrm{d}A}$$
 
 $$L(p,\omega) \equiv \frac{\mathrm{d}^2\Phi(p, \omega)}{\mathrm{d}\omega \mathrm{d}A \cos\theta}$$
 
-![Radiance](Radiance.png)
+![Radiance](../img/Radiance.png)
 
 - Recall
 	- Irradiance: power per projected unit area
@@ -78,7 +78,7 @@ $$L(p,\omega) \equiv \frac{\mathrm{d}^2\Phi(p, \omega)}{\mathrm{d}\omega \mathrm
 
 - Irradiance per unit solid angle *arriving at the surface*
 
-![Incident Radiance](Incident%20Radiance.png)
+![Incident Radiance](../img/Incident%20Radiance.png)
 
 $$L(p, \omega) = \frac{\mathrm{d}E(p)}{\mathrm{d}\omega \cos\theta}$$
 
@@ -86,7 +86,7 @@ $$L(p, \omega) = \frac{\mathrm{d}E(p)}{\mathrm{d}\omega \cos\theta}$$
 
 - Intensity per unit projected area **leaving the surface**
 
-![Exiting Radiance](Exiting%20Radiance.png)
+![Exiting Radiance](../img/Exiting%20Radiance.png)
 
 $$L(p,\omega)=\frac{\mathrm{d}I(o,\omega)}{\mathrm{d}A\cos\theta}$$
 

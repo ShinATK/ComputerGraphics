@@ -29,15 +29,15 @@ Let's continue the process of [[Ray Casting]].
 
 - Cast a ray per pixel, and Sending a ray to the light.
 
-![RayCasting-Steps](Pasted%20image%2020231129160947.png)
+![RayCasting-Steps](../img/Pasted%20image%2020231129160947.png)
 
 - Then, we should take reflection, refraction and shadow into consideration.
 
-![Recursive Ray Tracing](Pasted%20image%2020231129161120.png)
+![Recursive Ray Tracing](../img/Pasted%20image%2020231129161120.png)
 
 Ray casted from eye per pixel called, **primary ray**. And then the rays that sended to the light called, **shadow rays**, the rest rays called, **secondary rays**, because they are reflected or refracted from other objects.
 
-Let's stop here, and think about *how to determine a ray has an intersection with a surface*, see in [[Ray-Surface Intersection]]
+Let's stop here, and think about *how to determine a ray has an intersection with a surface*, see in [Ray-Surface Intersection](./Ray-Surface%20Intersection.md)
 
 
 

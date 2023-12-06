@@ -21,12 +21,12 @@ which means there will be many *details lost*.
 
 - Generate an image by **casting one ray per pixel**
 
-![Ray Casting - Generating Eye Rays](Ray%20Casting%20-%20Generating%20Eye%20Rays.png)
+![Ray Casting - Generating Eye Rays](../img/Ray%20Casting%20-%20Generating%20Eye%20Rays.png)
 
 
 - Check for shadows by **sending a ray to the light**
 
-![Ray Casting - Shading Pixels(Local Only)](Ray%20Casting%20-%20Shading%20Pixels(Local%20Only).png)
+![Ray Casting - Shading Pixels(Local Only)](../img/Ray%20Casting%20-%20Shading%20Pixels(Local%20Only).png)
 
 This algorithm traced rays until they hit an object. But in real world, when a ray hits a surface, additional rays may be cast because of reflection, refraction, and shadow.
 
