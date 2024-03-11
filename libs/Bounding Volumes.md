@@ -60,6 +60,7 @@ Key ideas:
 So for each pair, calcultate the $t_{min}$ and $t_{max}$, (*negative is fine, but later need care about this*). Then we will know the entering time and exiting time:
 
 $$t_{enter} = \max(t_{min})$$
+
 $$t_{exit} = \min(t_{max})$$
 
 *Some discussions:*
@@ -69,5 +70,5 @@ $t_{exit}<0$: box is behind the ray, no intersection
 $t_{exit}>0\ and\ t{enter}<0$: ray's region is inside the box, have intersection
 
 In summary, ray and AABB intersect iff
-$t_{enter}<=t_{exit}\ \&\&\ t_{exit}>=0$
+$t_{enter}<=t_{exit}\ and \ t_{exit}>=0$
 
