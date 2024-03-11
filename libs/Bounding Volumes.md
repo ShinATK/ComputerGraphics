@@ -63,14 +63,11 @@ $$t_{enter} = \max(t_{min})$$
 $$t_{exit} = \min(t_{max})$$
 
 *Some discussions:*
-- $t_{enter}<t_{exit}$
-	- ray *stays a while* in the box, must intersect
+$t_{enter}<t_{exit}$: ray *stays a while* in the box, must intersect
 - check time if negative
-	- $t_{exit}<0$
-		- box is behind the ray, no intersection
-	- $t_{exit}>0\ and\ t{enter}<0$
-		- ray's region is inside the box, have intersection
+$t_{exit}<0$: box is behind the ray, no intersection
+$t_{exit}>0\ and\ t{enter}<0$: ray's region is inside the box, have intersection
 
 In summary, ray and AABB intersect iff
-- $t_{enter}<=t_{exit}\ \&\&\ t_{exit}>=0$
+$t_{enter}<=t_{exit}\ \&\&\ t_{exit}>=0$
 
